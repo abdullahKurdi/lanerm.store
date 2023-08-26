@@ -4,11 +4,12 @@
 
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.index') }}">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+        <div class="sidebar-brand-icon">
+            <img src="{{asset('backend/img/shape.png')}}" width="30px" alt="">
         </div>
-        <div class="sidebar-brand-text mx-3">{{ config('app.name') }}</div>
+        <div class="sidebar-brand-text mx-2" style="font-size: 15px">LANERM BEAUTY</div>
     </a>
+
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
