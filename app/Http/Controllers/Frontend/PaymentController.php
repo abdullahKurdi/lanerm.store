@@ -13,7 +13,7 @@ use App\Notifications\Frontend\Customer\OrderThanksNotification;
 use App\Services\OmnipayService;
 use App\Services\OrderService;
 use Gloudemans\Shoppingcart\Facades\Cart;
-use Meneses\LaravelMpdf\Facades\LaravelMpdf as PDF;
+use Mccarlosen\LaravelMpdf\Facades\LaravelMpdf as PDF;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller

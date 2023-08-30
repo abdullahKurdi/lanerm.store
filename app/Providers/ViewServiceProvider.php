@@ -29,19 +29,19 @@ class ViewServiceProvider extends ServiceProvider
     {
         if (!request()->is('admin/*')) {
             view()->composer('*', function ($view) {
-                if (!Cache::has('shop_categories_menu')) {
-                    Cache::forever('shop_categories_menu', ProductCategory::tree());
-                }
-                $shop_categories_menu = Cache::get('shop_categories_menu');
-
-                if (!Cache::has('shop_tags_menu')) {
-                    Cache::forever('shop_tags_menu', Tag::whereStatus(true)->get());
-                }
-                $shop_tags_menu = Cache::get('shop_tags_menu');
+//                if (!Cache::has('shop_categories_menu')) {
+//                    Cache::forever('shop_categories_menu', ProductCategory::tree());
+//                }
+//                $shop_categories_menu = Cache::get('shop_categories_menu');
+//
+//                if (!Cache::has('shop_tags_menu')) {
+//                    Cache::forever('shop_tags_menu', Tag::whereStatus(true)->get());
+//                }
+//                $shop_tags_menu = Cache::get('shop_tags_menu');
 
                 $view->with([
-                    'shop_categories_menu' => $shop_categories_menu,
-                    'shop_tags_menu' => $shop_tags_menu,
+                    'shop_categories_menu' => ProductCategory::tree(),
+                    'shop_tags_menu' => Tag::whereStatus(true)->get(),
                 ]);
             });
         }
