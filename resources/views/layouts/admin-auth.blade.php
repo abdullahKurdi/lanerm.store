@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Exommerce Application">
+    <meta name="description" content="Lanerm Beauty Shop">
     <meta name="author" content="MindsCMS">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
