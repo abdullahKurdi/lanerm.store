@@ -21,10 +21,10 @@ class EntrustSeeder extends Seeder
         $supervisorRole = Role::create(['name' => 'supervisor', 'display_name' => 'Supervisor', 'description' => 'Supervisor', 'allowed_route' => 'admin',]);
         $customerRole = Role::create(['name' => 'customer', 'display_name' => 'Customer', 'description' => 'Customer', 'allowed_route' => null,]);
 
-        $admin = User::create(['first_name' => 'Admin', 'last_name' => 'System', 'username' => 'admin', 'email' => 'admin@ecommerce.test', 'email_verified_at' => now(), 'mobile' => '966500000000', 'password' => bcrypt('123123123'), 'status' => 1, 'remember_token' => Str::random(10)]);
+        $admin = User::create(['first_name' => 'Lanerm', 'last_name' => 'Admin', 'username' => 'admin', 'email' => 'admin@lanerm.com', 'email_verified_at' => now(), 'mobile' => '966500000000', 'password' => bcrypt('Ll@123456789'), 'status' => 1, 'remember_token' => Str::random(10)]);
         $admin->attachRole($adminRole);
 
-        $supervisor = User::create(['first_name' => 'Supervisor', 'last_name' => 'System',  'username' => 'supervisor', 'email' => 'supervisor@ecommerce.test', 'email_verified_at' => now(), 'mobile' => '966500000001', 'password' => bcrypt('123123123'), 'status' => 1, 'remember_token' => Str::random(10)]);
+        $supervisor = User::create(['first_name' => 'abdullah', 'last_name' => 'System',  'username' => 'supervisor', 'email' => 'supervisor@lanerm.com', 'email_verified_at' => now(), 'mobile' => '966500000001', 'password' => bcrypt('Ll@123456789'), 'status' => 1, 'remember_token' => Str::random(10)]);
         $supervisor->attachRole($supervisorRole);
 
         $customer = User::create(['first_name' => 'abdullah', 'last_name' => 'kurdi', 'username' => 'abdullah', 'email' => 'abdullah@gmail.com', 'email_verified_at' => now(), 'mobile' => '966500000002', 'password' => bcrypt('123123123'), 'status' => 1, 'remember_token' => Str::random(10)]);
@@ -34,7 +34,7 @@ class EntrustSeeder extends Seeder
          * Create 1000 fake users with their addresses.
          */
 
-        User::factory()->count(1000)->hasAddresses(1)->create();
+//        User::factory()->count(1000)->hasAddresses(1)->create();
 
         $manageMain = Permission::create(['name' => 'main', 'display_name' => 'Main', 'route' => 'index', 'module' => 'index', 'as' => 'index', 'icon' => 'fas fa-home', 'parent' => '0', 'parent_original' => '0', 'sidebar_link' => '1', 'appear' => '1', 'ordering' => '1',]);
         $manageMain->parent_show = $manageMain->id; $manageMain->save();

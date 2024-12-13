@@ -16,7 +16,7 @@ class WorldSeeder extends Seeder
         $sql_file = public_path('course_ecommerce_world.sql');
         $db = [
             'host' => '127.0.0.1',
-            'database' => 'course_ecommerce',
+            'database' => 'store',
             'username' => 'root',
             'password' => null,
         ];
